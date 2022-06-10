@@ -1,1 +1,1 @@
-# GCpAnyMetric
+# GCPAnyMetric is a simple console application written  poorly in C# by someone that has never written C# before. The Application is meant to be run on a windows host, and run as a service using the Windows Resource kit tool Srvany.exe. The Application will create Google Cloud Custom Metrics for the Windows Performance Monitor Counters you configure. The configuration of the Application is done entirely in the Windows Registry.
