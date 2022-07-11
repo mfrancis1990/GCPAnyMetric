@@ -28,7 +28,7 @@ The following REG_SZ values must exist and be configured:
     * serviceaccountpath - the full path including the name of the file that holds the service account key in json format
 
 
-Highlevel Structure of Subkeys.
+**Highlevel Structure of Subkeys.**
 A Subkey should be created for each Category of Performance Metric that you wish to use. These Categories can be observed in Windows Perfromance Monitor, when you go to add a counter, the Categories are listed in the dialog box on the left of the pop up window. These are values such as:
 
     * Processor
