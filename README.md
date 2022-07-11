@@ -29,4 +29,8 @@ Within the category we now define the Counters we wish to use. To define a count
     4. I would assign a value to this REG_SZ - TerminalServices/ActiveConnections
 
 What if the Performance Counter has multiple instances such as Processor which has _Total and other instances.
-To address Windows Performance Counters which have multiple instances, please use the "/" (no quotes) character in the REG_SZ label name. For example "% User Time/_Total" (no quotes). The string after the "/" is the instance name that MUST correspond to the instance name shown in Windows Performance Monitor.
+To address Windows Performance Counters which have multiple instances, please use the "/" (no quotes) character in the REG_SZ label name. 
+
+     For example "% User Time/_Total" (no quotes). 
+
+The string after the "/" is the instance name that MUST correspond to the instance name shown in Windows Performance Monitor.
