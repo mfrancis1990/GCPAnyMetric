@@ -9,7 +9,7 @@ The Application itself contained in this repo in the bin/release folder must be 
 
 Please follow the guidance here: https://cloud.google.com/monitoring/custom-metrics/creating-metrics#before_you_begin
 
-Authentication to Google Cloud
+**Authentication to Google Cloud**
 The application uses a service account in Google Cloud. You will need to create a Service Account at this point in this tools development the Service Account will need have the Monitoring Admin role. A lesser and more laser focused role definition will come in future iterations. With the service account created and the role applied, export a JSON format key and place this key on the file system of the Windows server you wish to monitor.
 
 There is a number of Registry Entries required that define the configuration.
