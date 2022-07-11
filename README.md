@@ -12,6 +12,7 @@ In the HKLM\CurrentControlSet\Services\GCPAnyMetric Key there should be a subkey
 A subkey of HKLM\CurrentControlSet\Services\GCPAnyMetric called Configuration should exist. Within this Configuration subkey is where the keys and Values are defined that define what Windows Performance Metrics you wish to monitor.
 Highlevel Structure of Subkeys.
 A Subkey should be created for each Category of Performance Metric that you wish to use. These Categories can be observed in Windows Perfromance Monitor, when you go to add a counter, the Categories are listed in the dialog box on the left of the pop up window. These are values such as:
+
     * Processor
     * Processor Information
     * RAS
