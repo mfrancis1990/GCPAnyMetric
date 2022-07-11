@@ -20,8 +20,9 @@ In the HKLM\CurrentControlSet\Services\GCPAnyMetric Key there should be a subkey
 **GCPAnyMetric Required Registry Keys.**
 A subkey of HKLM\CurrentControlSet\Services\GCPAnyMetric called Configuration should exist. Within this Configuration subkey is where the keys and Values are defined that define what Windows Performance Metrics you wish to monitor.
 
-Mandatory Values in the Configuration Subkey.
+**Mandatory Values in the Configuration Subkey.**
 The following REG_SZ values must exist and be configured:
+
     * projectid - the ProjectID of the GCP Project where the workload resides
     * zone - the GCP Zone where the workload resides (in future versions this will be dynamically determined)
     * serviceaccountpath - the full path including the name of the file that holds the service account key in json format
