@@ -5,7 +5,8 @@ GCPAnyMetric is designed to forward any Windows Performance Metrics to Google Cl
 
 The Application itself contained in this repo in the bin/release folder must be copied to a subfolder called GCPAnyMetric in the C:\Monitor folder.
 
-Google Cloud Preparation
+**Google Cloud Preparation**
+
 Please follow the guidance here: https://cloud.google.com/monitoring/custom-metrics/creating-metrics#before_you_begin
 
 Authentication to Google Cloud
