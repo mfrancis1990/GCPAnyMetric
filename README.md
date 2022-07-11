@@ -24,7 +24,7 @@ It is these Category Names that will be the subkey names under the Configuration
 Within the category we now define the Counters we wish to use. To define a counter in the Registry, find the Category subkey and add a REG_SZ value - the Value Name must equal the name of the Counter exactly. The Value assigned is the string that will appear in Google Cloud Monitoring. For example if I put the string TerminalServices/ActiveConnections as the value then in Google Cloud Monitoring I can expect to see under Custom metrics a metric called TerminalServices/ActiveConnections. So as to demonstrate the complete example; if I wished to send the Terminal Services Active Sessions to Google Cloud Monitoring and call it TerminalServices/ActiveConnections I would:
 
     1. Have a subkey under HKLM\CurrentControlSet\Services\GCPAnymetric called Configuration.
-    2 Under Configuration I would have another subkey called Terminal Services (which is the category)
+    2. Under Configuration I would have another subkey called Terminal Services (which is the category)
     3. I would have a REG_SZ Value with a label name called Active Sessions
     4. I would assign a value to this REG_SZ - TerminalServices/ActiveConnections
 
