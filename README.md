@@ -5,6 +5,12 @@ GCPAnyMetric is designed to forward any Windows Performance Metrics to Google Cl
 
 The Application itself contained in this repo in the bin/release folder must be copied to a subfolder called GCPAnyMetric in the C:\Monitor folder.
 
+Google Cloud Preparation
+Please follow the guidance here: https://cloud.google.com/monitoring/custom-metrics/creating-metrics#before_you_begin
+
+Authentication to Google Cloud
+The application uses a service account in Google Cloud. You will need to create a Service Account at this point in this tools development the Service Account will need have the Monitoring Admin role. A lesser and more laser focused role definition will come in future iterations. With the service account created and the role applied, export a JSON format key and place this key on the file system of the Windows server you wish to monitor.
+
 There is a number of Registry Entries required that define the configuration.
 
 **SRVANY Required Registry Keys.**
@@ -13,6 +19,14 @@ In the HKLM\CurrentControlSet\Services\GCPAnyMetric Key there should be a subkey
 
 **GCPAnyMetric Required Registry Keys.**
 A subkey of HKLM\CurrentControlSet\Services\GCPAnyMetric called Configuration should exist. Within this Configuration subkey is where the keys and Values are defined that define what Windows Performance Metrics you wish to monitor.
+
+Mandatory Values in the Configuration Subkey.
+The following REG_SZ values must exist and be configured:
+    * projectid - the ProjectID of the GCP Project where the workload resides
+    * zone - the GCP Zone where the workload resides (in future versions this will be dynamically determined)
+    * serviceaccountpath - the full path including the name of the file that holds the service account key in json format
+
+
 Highlevel Structure of Subkeys.
 A Subkey should be created for each Category of Performance Metric that you wish to use. These Categories can be observed in Windows Perfromance Monitor, when you go to add a counter, the Categories are listed in the dialog box on the left of the pop up window. These are values such as:
 
