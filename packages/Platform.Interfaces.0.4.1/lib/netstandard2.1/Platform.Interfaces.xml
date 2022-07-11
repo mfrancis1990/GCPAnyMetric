@@ -1,0 +1,284 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Platform.Interfaces</name>
+    </assembly>
+    <members>
+        <member name="T:Platform.Interfaces.ICli">
+            <summary>
+            <para>Defines command line interfaces for command that interacts with an operating system.</para>
+            <para>Определяет интерфейс командной строки, для команды взаимодействующей с операционной системой.</para>
+            </summary>
+        </member>
+        <member name="M:Platform.Interfaces.ICli.Run(System.String[])">
+            <summary>
+            <para>Runs a command.</para>
+            <para>Запускает команду.</para>
+            </summary>
+            <param name="args">
+            <para>Arguments for a command.</para>
+            <para>Аргументы для команды.</para>
+            </param>
+            <returns>
+            <para>Returns command's exit code.</para>
+            <para>Возвращает код выхода команды.</para>
+            </returns>
+        </member>
+        <member name="T:Platform.Interfaces.ICounter`2">
+            <summary>
+            <para>Defines a counter that requires an argument to perform a count.</para>
+            <para>Определяет счётчик, которому требуется аргумент для выполнения подсчёта.</para>
+            </summary>
+            <typeparam name="TArgument">
+            <para>The argument type.</para>
+            <para>Тип аргумента.</para>
+            </typeparam>
+            <typeparam name="TResult">
+            <para>The count result type.</para>
+            <para>Тип результата подсчёта.</para>
+            </typeparam>
+        </member>
+        <member name="M:Platform.Interfaces.ICounter`2.Count(`1)">
+            <summary>
+            <para>Performs a count.</para>
+            <para>Выполняет подсчёт.</para>
+            </summary>
+            <param name="argument">
+            <para>The argument.</para>
+            <para>Аргумент.</para>
+            </param>
+            <returns>
+            <para>The count result.</para>
+            <para>Результат подсчёта.</para>
+            </returns>
+        </member>
+        <member name="T:Platform.Interfaces.ICounter`1">
+            <summary>
+            <para>Defines a counter.</para>
+            <para>Определяет счётчик.</para>
+            </summary>
+            <typeparam name="TResult">
+            <para>The count result type.</para>
+            <para>Тип результата подсчёта.</para>
+            </typeparam>
+        </member>
+        <member name="M:Platform.Interfaces.ICounter`1.Count">
+            <summary>
+            <para>Performs a count.</para>
+            <para>Выполняет подсчёт.</para>
+            </summary>
+            <returns>
+            <para>The count result.</para>
+            <para>Результат подсчёта.</para>
+            </returns>
+        </member>
+        <member name="T:Platform.Interfaces.ICriterionMatcher`1">
+            <summary>
+            <para>Defines a criterion matcher, that contains a specific method for determining whether the argument matches the criterion or not.</para>
+            <para>Определяет объект который проверяет соответствие критерию и содержит конкретный метод для определения, соответствует ли аргумент критерию или нет.</para>
+            </summary>
+            <typeparam name="TArgument">
+            <para>Argument type.</para>
+            <para>Тип аргумента.</para>
+            </typeparam>
+        </member>
+        <member name="M:Platform.Interfaces.ICriterionMatcher`1.IsMatched(`0)">
+            <summary>
+            <para>Determines whether the argument matches the criterion.</para>
+            <para>Определяет, соответствует ли аргумент критерию.</para>
+            </summary>
+            <param name="argument">
+            <para>The argument.</para>
+            <para>Аргумент.</para>
+            </param>
+            <returns>
+            <para>A value that determines whether the argument matches the criterion.</para>
+            <para>Значение, определяющие соответствует ли аргумент критерию.</para>
+            </returns>
+        </member>
+        <member name="T:Platform.Interfaces.IFactory`1">
+            <summary>
+            <para>Defines a factory that produces instances of a specific type.</para>
+            <para>Определяет фабрику, которая производит экземпляры определенного типа.</para>
+            </summary>
+            <typeparam name="TProduct">
+            <para>Type of produced instances.</para>
+            <para>Тип производимых экземпляров.</para>
+            </typeparam>
+        </member>
+        <member name="M:Platform.Interfaces.IFactory`1.Create">
+            <summary>
+            <para>Creates an instance of <typeparamref name="TProduct"/> type.</para>
+            <para>Создает экземпляр типа <typeparamref name="TProduct"/>.</para>
+            </summary>
+            <returns>
+            <para>The instance of <typeparamref name="TProduct"/> type.</para>
+            <para>Экземпляр типа <typeparamref name="TProduct"/>.</para>
+            </returns>
+        </member>
+        <member name="T:Platform.Interfaces.IProperties`3">
+            <summary>
+            <para>Defines a properties operator that is able to get or set values of properties of a object of a specific type.</para>
+            <para>Определяет оператор свойств, который может получать или устанавливать значения свойств объекта определенного типа.</para>
+            </summary>
+            <typeparam name="TObject">
+            <para>Object type.</para>
+            <para>Тип объекта.</para>
+            </typeparam>
+            <typeparam name="TProperty">
+            <para>Property reference type.</para>
+            <para>Тип ссылки на свойство.</para>
+            </typeparam>
+            <typeparam name="TValue">
+            <para>Property value type.</para>
+            <para>Тип значения свойства.</para>
+            </typeparam>
+        </member>
+        <member name="M:Platform.Interfaces.IProperties`3.GetValue(`0,`1)">
+            <summary>
+            <para>Gets the value of the property in the specified object.</para>
+            <para>Получает значение свойства в указанном объекте.</para>
+            </summary>
+            <param name="object">
+            <para>The object reference.</para>
+            <para>Ссылка на объект.</para>
+            </param>
+            <param name="property">
+            <para>The property reference.</para>
+            <para>Ссылка на свойство.</para>
+            </param>
+            <returns>
+            <para>The value of the property.</para>
+            <para>Значение свойства.</para>
+            </returns>
+        </member>
+        <member name="M:Platform.Interfaces.IProperties`3.SetValue(`0,`1,`2)">
+            <summary>
+            <para>Sets the value of a property in the specified object.</para>
+            <para>Устанавливает значение свойства в указанном объекте.</para>
+            </summary>
+            <param name="object">
+            <para>The object reference.</para>
+            <para>Ссылка на объект.</para>
+            </param>
+            <param name="property">
+            <para>The property reference.</para>
+            <para>Ссылка на свойство.</para>
+            </param>
+            <param name="value">
+            <para>The value.</para>
+            <para>Значение.</para>
+            </param>
+        </member>
+        <member name="T:Platform.Interfaces.IProperty`2">
+            <summary>
+            <para>Defines a specific property operator that is able to get or set values of that property.</para>
+            <para>Определяет оператор определённого свойства, который может получать или устанавливать его значения.</para>
+            </summary>
+            <typeparam name="TObject">
+            <para>Object type.</para>
+            <para>Тип объекта.</para>
+            </typeparam>
+            <typeparam name="TValue">
+            <para>Property value type.</para>
+            <para>Тип значения свойства.</para>
+            </typeparam>
+        </member>
+        <member name="T:Platform.Interfaces.IProvider`2">
+            <summary>
+            <para>Defines the provider of objects/values for which an argument must be specified.</para>
+            <para>Определяет поставщика объектов/значений, для получения которых необходимо указать аргумент.</para>
+            </summary>
+            <typeparam name="TProvided">
+            <para>Type of provided objects/values.</para>
+            <para>Тип предоставляемых объектов/значений.</para>
+            </typeparam>
+            <typeparam name="TArgument">
+            <para>Argument type.</para>
+            <para>Тип аргумента.</para>
+            </typeparam>
+        </member>
+        <member name="M:Platform.Interfaces.IProvider`2.Get(`1)">
+            <summary>
+            <para>Provides an object(s)/value(s).</para>
+            <para>Предоставляет объект(ы)/значение(я).</para>
+            </summary>
+            <param name="argument">
+            <para>The argument required to acquire the object(s)/value(s).</para>
+            <para>Аргумент, необходимый для получения объекта(ов)/значения(ий).</para>
+            </param>
+            <returns>
+            <para>The object(s)/value(s).</para>
+            <para>Объект(ы)/значение(я).</para>
+            </returns>
+        </member>
+        <member name="T:Platform.Interfaces.IProvider`1">
+            <summary>
+            <para>Defines the provider of objects/values.</para>
+            <para>Определяет поставщика объектов/значений.</para>
+            </summary>
+            <typeparam name="TProvided">
+            <para>Type of provided object/value.</para>
+            <para>Тип предоставляемого объекта/значения.</para>
+            </typeparam>
+        </member>
+        <member name="M:Platform.Interfaces.IProvider`1.Get">
+            <summary>
+            <para>Provides an object(s)/value(s).</para>
+            <para>Предоставляет объект(ы)/значение(я).</para>
+            </summary>
+            <returns>
+            <para>The object(s)/value(s).</para>
+            <para>Объект(ы)/значение(я).</para>
+            </returns>
+        </member>
+        <member name="T:Platform.Interfaces.ISetter`2">
+            <summary>
+            <para>Defines an setter that requires an argument to set the passed value as a new state.</para>
+            <para>Определяет установщик, которому для установки переданного значения в качестве нового состояния требуется аргумент.</para>
+            </summary>
+            <typeparam name="TValue">
+            <para>Type of set value.</para>
+            <para>Тип устанавливаемого значения.</para>
+            </typeparam>
+            <typeparam name="TArgument">
+            <para>The argument type.</para>
+            <para>Тип аргумента.</para>
+            </typeparam>
+        </member>
+        <member name="M:Platform.Interfaces.ISetter`2.Set(`1,`0)">
+            <summary>
+            <para>Sets the value of a specific property in the specified object.</para>
+            <para>Устанавливает значение определённого свойства в указанном объекте.</para>
+            </summary>
+            <param name="argument">
+            <para>The argument.</para>
+            <para>Аргумент.</para>
+            </param>
+            <param name="value">
+            <para>The value.</para>
+            <para>Значение.</para>
+            </param>
+        </member>
+        <member name="T:Platform.Interfaces.ISetter`1">
+            <summary>
+            <para>Defines an setter that sets the passed value as a new state.</para>
+            <para>Определяет установщик, который устанавливает переданное значение в качестве нового состояния.</para>
+            </summary>
+            <typeparam name="TValue">
+            <para>Type of set value.</para>
+            <para>Тип устанавливаемого значения.</para>
+            </typeparam>
+        </member>
+        <member name="M:Platform.Interfaces.ISetter`1.Set(`0)">
+            <summary>
+            <para>Sets the value of a specific property in the specified object.</para>
+            <para>Устанавливает значение определённого свойства в указанном объекте.</para>
+            </summary>
+            <param name="value">
+            <para>The value.</para>
+            <para>Значение.</para>
+            </param>
+        </member>
+    </members>
+</doc>
