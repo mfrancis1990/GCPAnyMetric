@@ -1,4 +1,6 @@
-                                                   **GCPAnyMetric**
+
+                                                 
+                                                 **GCPAnyMetric**
 
 
 GCPAnyMetric is designed to forward any Windows Performance Metrics to Google Cloud Monitoring. It is a simple C# application developed with Visual Studio 2022. The application is NOT a Windows Service natively at this point. It is expected that the end user will use the Windows 2003 Resource Kit tool srvany.exe to run this application as a service. Once the srvany.exe configuration has been done to create the Windows Service - which MUST be called - GCPAnyMetric - the registry parameters for the service must be configured.
@@ -53,3 +55,6 @@ To address Windows Performance Counters which have multiple instances, please us
      For example "% User Time/_Total" (no quotes). 
 
 The string after the "/" is the instance name that MUST correspond to the instance name shown in Windows Performance Monitor.
+
+
+Copyright 2022 Google. This software is provided as-is, without warranty or representation for any use or purpose. Your use of it is subject to your agreement with Google.
