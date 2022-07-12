@@ -57,4 +57,4 @@ To address Windows Performance Counters which have multiple instances, please us
 The string after the "/" is the instance name that MUST correspond to the instance name shown in Windows Performance Monitor.
 
 
-Copyright 2022 Google. This software is provided as-is, without warranty or representation for any use or purpose. Your use of it is subject to your agreement with Google.
+**Copyright 2022 Google. This software is provided as-is, without warranty or representation for any use or purpose. Your use of it is subject to your agreement with Google.**
